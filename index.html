@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+	<link rel="stylesheet" type="text/css" href="to-do-list.css">
+</head>
+
+<body>
+	<div>
+		<h1>To Do List</h1>
+	</div>
+	<div>
+		<p>Enter the things you need to do separated by a comma.</p>
+	</div>
+	<div>
+		<form>
+			<input type="text" id="item" placeholder="e.g. Take out the trash, Water the garden, Mow the lawn..." class="input">
+			<input type="submit" onclick="addItem()">
+		</form>
+	</div>
+	<div>
+		<ul id="list">
+		</ul>
+	</div>
+	<script src="to-do-list.js"></script>
+</body>
+</html>
