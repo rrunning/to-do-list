@@ -13,10 +13,8 @@
 		<p>Enter the things you need to do separated by a comma.</p>
 	</div>
 	<div>
-		<form>
-			<input type="text" id="item" placeholder="e.g. Take out the trash, Water the garden, Mow the lawn..." class="input">
-			<input type="submit" onclick="addItem()">
-		</form>
+		<input type="text" id="item" placeholder="e.g. Take out the trash, Water the garden, Mow the lawn..." class="input" onkeypress="enterKey(event)">
+		<button onclick="addItem()">Submit</button>
 	</div>
 	<div>
 		<ul id="list">
