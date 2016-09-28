@@ -3,7 +3,9 @@
 
 function addItem(inputValue) {
 	var element = document.createElement("li");
-	document.body.appendChild(element).innerHTML = inputValue;
+	element.innerHTML = inputValue;
+	element.addEventListener('click', crossOffItem)
+	document.body.appendChild(element)
 	clearForm()
 
 }
@@ -26,5 +28,9 @@ function stringSplitting(){
 	for(var i = 0; i < stringItems.length; i++){
 		addItem(stringItems[i])
 	}
+}
+
+function crossOffItem() {
+	
 }
 
