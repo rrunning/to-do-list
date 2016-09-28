@@ -1,20 +1,30 @@
+	var input = document.getElementById('item')
+	
 
-// document.addEventListener('keypress', enterKey);
-
-function addItem() {
+function addItem(inputValue) {
 	var element = document.createElement("li");
-	var input = document.getElementById('item').value;
-	document.body.appendChild(element).innerHTML = input;
+	document.body.appendChild(element).innerHTML = inputValue;
 	clearForm()
 
 }
 
 function enterKey(peanut) {
 	if (peanut.keyCode == 13 || peanut.which == 13){
-		addItem()
+		stringSplitting()
 	}
 }
 
 function clearForm() {
 	document.getElementById('item').value = '';
 }
+
+
+function stringSplitting(){
+	var stringSplitter = input.value;
+	var stringItems = stringSplitter.split(',');
+	console.log(stringItems);
+	for(var i = 0; i < stringItems.length; i++){
+		addItem(stringItems[i])
+	}
+}
+
