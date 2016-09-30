@@ -28,14 +28,12 @@ function clearForm() {
 function stringSplitting(){
 	var stringSplitter = input.value;
 	var stringItems = stringSplitter.split(',');
-	console.log(stringItems);
 	for(var i = 0; i < stringItems.length; i++){
 		addItem(stringItems[i])
 	}
 }
 
 function crossOffItem(event) {
-	console.log(event)
 	var target = event.target || event.srcElement;
 	if(target.className === '') {
 		target.className = 'strike-through';

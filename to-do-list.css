@@ -1,11 +1,24 @@
+.all {
+	text-align: center;
+	font-family: "Comic Sans MS";
+}
+.input{
+	font-size: 15px;
+	font-family: "Comic Sans MS";
+	width: 35%;
+	height: 25px;
+	border-radius: 8px;
 
 }
-.input:hover {
-	content: "Press Enter";
-}
-
 .strike-through {
 	font-style: opacity=".5";
 	color: grey;
 	text-decoration: line-through;
+}
+button {
+	visibility: hidden;
+}
+input{
+	display: block;
+	margin: auto;
 }
