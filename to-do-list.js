@@ -4,8 +4,8 @@
 function addItem(inputValue) {
 	var element = document.createElement("li");
 	element.innerHTML = inputValue;
-	element.addEventListener('click', crossOffItem)
-	document.body.appendChild(element)
+	element.addEventListener('click', crossOffItem);
+	document.body.appendChild(element);
 	clearForm()
 
 }
@@ -30,7 +30,13 @@ function stringSplitting(){
 	}
 }
 
-function crossOffItem() {
-	
+function crossOffItem(event) {
+	console.log(event)
+	var target = event.target || event.srcElement;
+	if(target.className === '') {
+		target.className = 'strike-through';
+	} else {
+		target.className = '';
+	}
 }
 

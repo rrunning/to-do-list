@@ -3,3 +3,9 @@
 .input:hover {
 	content: "Press Enter";
 }
+
+.strike-through {
+	font-style: opacity=".5";
+	color: grey;
+	text-decoration: line-through;
+}
