@@ -2,6 +2,10 @@
 	
 
 function addItem(inputValue) {
+	if(inputValue === '') {
+		alert('Enter your To-Do item!');
+		return;
+	}
 	var element = document.createElement("li");
 	element.innerHTML = inputValue;
 	element.addEventListener('click', crossOffItem);
