@@ -1,3 +1,25 @@
+/* latin */
+@font-face {
+  font-family: 'Rock Salt';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rock Salt'), local('RockSalt'), url(https://fonts.gstatic.com/s/rocksalt/v6/Q94aHXFHGip10K5uxi1jOJBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+body {
+	background-color: #e0e2e2;
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	width: 1000px;
+}
+#list {
+	background-image: url(lined-paper.png);
+	background-repeat: repeat-y;
+	background-position: center;
+	min-height: 300px; 
+}
 .all {
 	text-align: center;
 	font-family: "Comic Sans MS";
@@ -8,6 +30,7 @@
 	width: 35%;
 	height: 25px;
 	border-radius: 8px;
+	padding-left: 5px;
 
 }
 .strike-through {
@@ -21,4 +44,13 @@ button {
 input{
 	display: block;
 	margin: auto;
+}
+.list-item {
+	cursor: pointer;
+	font-family: Rock Salt;
+	list-style-type: none;
+	line-height: 24.5px;
+}
+.list-item:hover {
+	transform: scale(1.2);
 }

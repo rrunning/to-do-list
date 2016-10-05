@@ -8,8 +8,9 @@ function addItem(inputValue) {
 	}
 	var element = document.createElement("li");
 	element.innerHTML = inputValue;
+	element.setAttribute('class', 'list-item')
 	element.addEventListener('click', crossOffItem);
-	document.body.appendChild(element);
+	document.getElementById('list').appendChild(element);
 	clearForm()
 
 }
@@ -35,10 +36,6 @@ function stringSplitting(){
 
 function crossOffItem(event) {
 	var target = event.target || event.srcElement;
-	if(target.className === '') {
-		target.className = 'strike-through';
-	} else {
-		target.className = '';
-	}
+	target.classList.toggle('strike-through');
 }
 
