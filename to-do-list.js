@@ -1,4 +1,4 @@
-	var input = document.getElementById('item')
+	var input = document.getElementById('item');
 	
 
 function addItem(inputValue) {
@@ -9,20 +9,20 @@ function addItem(inputValue) {
 	}
 	var element = document.createElement("li");
 	element.innerHTML = inputValue;
-	element.setAttribute('class', 'list-item')
+	element.setAttribute('class', 'list-item');
 	element.addEventListener('click', crossOffItem);
 	document.getElementById('list').appendChild(element);
-	clearForm()
+	clearForm();
 }
 
 function enterKey(peanut) {
 	if (peanut.keyCode == 13 || peanut.which == 13){
-		stringSplitting()
+		stringSplitting();
 	}
 }
 
 function clearForm() {
-	document.getElementById('item').value = '';
+	input.value = '';
 }
 
 
@@ -30,7 +30,7 @@ function stringSplitting(){
 	var stringSplitter = input.value;
 	var stringItems = stringSplitter.split(',');
 	for(var i = 0; i < stringItems.length; i++){
-		addItem(stringItems[i])
+		addItem(stringItems[i]);
 	}
 }
 
