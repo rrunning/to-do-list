@@ -2,7 +2,8 @@
 	
 
 function addItem(inputValue) {
-	if(inputValue === '') {
+	var dumbSpaceDeletingVariable = inputValue.trim();
+	if(dumbSpaceDeletingVariable === '') {
 		alert('Enter your To-Do item!');
 		return;
 	}
@@ -12,7 +13,6 @@ function addItem(inputValue) {
 	element.addEventListener('click', crossOffItem);
 	document.getElementById('list').appendChild(element);
 	clearForm()
-
 }
 
 function enterKey(peanut) {
